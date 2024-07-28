@@ -28,7 +28,6 @@ const useGames = () => {
 
   useEffect(() => {
     const controller = new AbortController();
-
     setIsLoading(true);
     apiClient
       .get<GamesResponse>("games", { signal: controller.signal })
