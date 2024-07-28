@@ -20,18 +20,18 @@ function GameGrid() {
         }}
         spacing={5}
       >
-        {isLoading &&
-          skeletons.map((skeleton) => (
-            <GameCardContainer>
-              <GameCardSkeleton key={skeleton}></GameCardSkeleton>
-            </GameCardContainer>
-          ))}
-        {!isLoading &&
-          data.map((game) => (
-            <GameCardContainer>
-              <GameCard key={game.id} game={game}></GameCard>
-            </GameCardContainer>
-          ))}
+        {isLoading
+          ? skeletons.map((skeleton) => (
+              <GameCardContainer>
+                <GameCardSkeleton key={skeleton}></GameCardSkeleton>
+              </GameCardContainer>
+            ))
+          : ""}
+        {data.map((game) => (
+          <GameCardContainer>
+            <GameCard key={game.id} game={game}></GameCard>
+          </GameCardContainer>
+        ))}
       </SimpleGrid>
     </>
   );
