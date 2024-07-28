@@ -8,8 +8,6 @@ function GameGrid() {
   const { data, error, isLoading } = useGames();
   const skeletons = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-  console.log(isLoading);
-
   return (
     <>
       {error && <Text>{error}</Text>}
@@ -20,8 +18,7 @@ function GameGrid() {
           lg: 3,
           xl: 5,
         }}
-        spacing={10}
-        p={5}
+        spacing={5}
       >
         {isLoading &&
           skeletons.map((skeleton) => (
