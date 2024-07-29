@@ -25,6 +25,7 @@ function GameGrid({ selectedGenre }: Props) {
           xl: 5,
         }}
         spacing={5}
+        mt={2}
       >
         {isLoading
           ? skeletons.map((skeleton) => (
