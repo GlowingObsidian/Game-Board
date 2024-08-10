@@ -17,7 +17,6 @@ function GameGrid({ gameQuery }: Props) {
 
   return (
     <>
-      {gameQuery.genre && <Text fontSize="lg">{gameQuery.genre.name}</Text>}
       {error && <Text>{error}</Text>}
       <SimpleGrid
         columns={{
