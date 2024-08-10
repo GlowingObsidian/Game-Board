@@ -13,15 +13,16 @@ function GameCard({ game }: Props) {
     <Card overflow="hidden">
       <Image
         src={getCroppedImageUrl(game.name, game.background_image, 600, 400)}
+        objectFit="contain"
       ></Image>
       <CardBody>
-        <Heading fontSize="xl">{game.name}</Heading>
-        <HStack justifyContent="space-between">
+        <HStack justifyContent="space-between" mb={3}>
           <PlatformIcons
             platforms={game.parent_platforms.map((p) => p.platform)}
           ></PlatformIcons>
           <CriticScore score={game.metacritic}></CriticScore>
         </HStack>
+        <Heading fontSize="xl">{game.name}</Heading>
       </CardBody>
     </Card>
   );
