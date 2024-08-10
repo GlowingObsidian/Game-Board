@@ -29,7 +29,12 @@ function GenreList({ selectedGenre, onSelectGenre }: Props) {
           <HStack spacing={2}>
             <Image
               boxSize="32px"
-              src={getCroppedImageUrl(genre.image_background, 600, 400)}
+              src={getCroppedImageUrl(
+                genre.name,
+                genre.image_background,
+                600,
+                400
+              )}
               rounded="lg"
             />
             <Button
