@@ -8,7 +8,7 @@ import {
   FaGooglePlay,
 } from "react-icons/fa";
 import { SiNintendoswitch } from "react-icons/si";
-import { Platform } from "../hooks/useGames";
+import { Platform } from "../hooks/usePlatforms";
 import { HStack, Icon } from "@chakra-ui/react";
 import { IconType } from "react-icons";
 
